@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Chat</title>
+</head>
+<body>
+<a href="private.html">직접채팅방으로 이동</a>
+<div>
+    <label>Username: </label>
+    <input type="text" id="username"/>
+    <button onclick="setUsername()">set username</button>
+</div>
+<div style="position: fixed; bottom: 0px; background-color:white" >
+    <label>Message: </label>
+    <input type="text" id="message"/>
+    <button id="send-btn">Send</button>
+</div>
+<div id="chat">
+</div>
+
+<script src="/webjars/sockjs-client/1.1.2/sockjs.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"
+        integrity="sha512-iKDtgDyTHjAitUDdLljGhenhPwrbBfqTKWO1mkhSFH3A7blITC9MhYon6SjnMhp4o0rADGw9yAC6EW4t5a4K3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    var socket = new SockJS('/chat-websocket');
+    var stompClient = Stomp.over(socket);
+    // var stompClient = stomp.over(() => socket);
+    var username = null;
+
+    // stompClient.connect();
+    connect();
+
+    function connect() {
+        console.log("연결성공")
+        stompClient.connect({}, function (frame) {
+            console.log('Connected: ' + frame);
+            stompClient.subscribe('/user/queue/messages', function (message) {
+                console.log(JSON.parse(message.body));
+                showMessage(JSON.parse(message.body));
+            });
+        });
+    }
+
+    function sendMessage() {
+        var messageInput = document.getElementById('message');
+        var message = {
+            "sender": username,
+            "content": messageInput.value
+        };
+        stompClient.send('/app/chat', {}, JSON.stringify(message));
+        messageInput.value = '';
+    }
+
+    function showMessage(message) {
+        var chatDiv = document.getElementById('chat');
+        var messageDiv = document.createElement('div');
+        console.log("message", message)
+        console.log("asdsdf")
+        messageDiv.innerHTML = "<p>" + message.sender + ': ' + message.content + "</p>";
+        chatDiv.appendChild(messageDiv);
+    }
+
+    function setUsername() {
+        username = document.getElementById('username').value;
+        document.getElementById('username').disabled = true;
+        connect();
+    }
+    function send(){
+        if(event.keyCode==13){
+            sendMessage();
+        }
+    }
+    let send_btn = document.getElementById("send-btn");
+    send_btn.addEventListener("click", function (){
+        sendMessage();
+    })
+    document.addEventListener("DOMContentLoaded", function() {
+        // Event listener code goes here, including the send_btn event listener
+        send_btn.addEventListener("keydown", function (e){
+            if(e.key == "Enter")
+                sendMessage();
+        });
+    });
+</script>
+</body>
+</html>

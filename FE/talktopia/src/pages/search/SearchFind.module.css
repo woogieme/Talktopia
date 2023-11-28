@@ -1,0 +1,371 @@
+.janjan {
+  position: fixed;
+  top: 15%;
+  right: 370px;
+  width: 550px;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 0fr 0fr 5fr;
+  height: 70%;
+  padding: 20px;
+  /*이미지를 커버할 수 있도록 설정*/
+  text-align: left;
+  z-index: 100;
+  border-radius: 20px;
+  font-family: 'Dovemayo_wild';
+
+  /* blur */
+  /* box-shadow: 0 5px 30px rgba(0, 0, 0, .2); */
+  border-radius: 20px;
+
+  background: linear-gradient(rgba(255, 255, 255, 0.636) 60%, rgba(255, 255, 255, 0.347), #e0feff66);
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.janjan h2 {}
+
+.search-find-hr {
+  height: 3px;
+  background-image: linear-gradient(90deg, white, rgba(255, 255, 255, 0.206));
+  border: 0;
+}
+
+.img-small {
+  max-width: 25px;
+  /* 최대 너비 설정 */
+  max-height: 25px;
+  /* 최대 높이 설정 */
+}
+
+/* 가로 목록 스타일 */
+.horizontal-list {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+
+  justify-content: center;
+  /* 중앙 정렬 추가 */
+}
+
+.iSelect {
+  width: 190px;
+  height: 50px;
+
+  /* padding: 10px 10px 10px 20px; */
+  width: 100%;
+
+  margin: 10px 0 0 0;
+  background-color: rgba(233, 234, 236, 0.555);
+  border-radius: 30px;
+  color: rgb(92, 93, 97);
+  border: 2px solid rgba(255, 255, 255, 0.201);
+  border-top: 2px solid rgba(255, 255, 255, 0.604);
+}
+
+.button-input {
+  /* margin: auto; */
+  /* padding: 10px; */
+}
+
+.iInput {
+  padding: 10px 10px 10px 20px;
+  width: 100%;
+
+  margin: 10px 0 0 0;
+  background-color: rgba(233, 234, 236, 0.555);
+  border-radius: 30px;
+  color: rgb(92, 93, 97);
+  border: 2px solid rgba(255, 255, 255, 0.201);
+  border-top: 2px solid rgba(255, 255, 255, 0.604);
+  font-family: 'Dovemayo_wild';
+}
+
+.iInput::after {
+  content: url("../../../public/img/search.svg");
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 50px;
+}
+
+
+/* 가로 내용 스타일 */
+.horizontal-content {
+  align-items: center;
+  margin: 10px;
+
+}
+
+/* 이미지 스타일 */
+.img-small {
+  max-width: 100px;
+  height: auto;
+}
+
+.button1 {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr 1fr; */
+  margin: 20px 0 0 0;
+  z-index: 100;
+}
+
+.button-change {
+  display: inline-block;
+  margin: 0 10px 0 0;
+  width: 120px;
+  height: 40px;
+  font-family: 'Dovemayo_wild';
+  font-size: 18px;
+  color: #4a4b4d;
+  z-index: 100;
+
+  transition: all 0.2s ease-out;
+
+  /* blur */
+  box-shadow: 0 5px 10px rgba(255, 255, 255, .1);
+  border-radius: 20px;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.045) 20%, transparent, #e0feff66);
+  /* background-color: rgba(255, 255, 255, 0.3); */
+
+  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+
+}
+
+.button-change:hover {
+  background-color: white;
+}
+
+
+.button-margin {
+  margin: 0 10px;
+  /* 원하는 여백 크기를 설정하세요 */
+}
+
+.no-results-message {
+  font-size: 20px;
+  color: #0000008f;
+  text-align: center;
+  padding: 10px;
+}
+
+
+/* .img-small {
+  max-width: 50px;
+  max-height: 50px;
+} */
+
+
+.search-results {
+  width: 100%;
+  max-height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  /* position: relative; */
+}
+
+/* 스크롤바 */
+.search-results::-webkit-scrollbar {
+  width: 4px;
+}
+
+.search-results::-webkit-scrollbar-track {
+  /* background-color: grey; */
+  border-radius: 10px;
+  /* box-shadow: inset 0px 0px 5px white; */
+}
+
+.search-results::-webkit-scrollbar-thumb {
+  background-color: #8db1c7;
+
+  border-radius: 10px;
+  /* background-clip: padding-box; */
+  border: 1px solid transparent;
+}
+
+
+.modaltitle {
+  font-size: 17px;
+  font-weight: 700;
+
+  margin: 0;
+  text-align: left;
+  font-size: 30px;
+  display: inline;
+  color: #4a4d52;
+}
+
+.modaltitle1 {
+  margin: 0 0 10px 0;
+  display: inline-block;
+  text-align: left;
+  font-size: 25px;
+  /* margin-top: 25px; */
+  /* margin-bottom: 10px; */
+  color: #4a4d52;
+  font-weight: 600;
+}
+
+.out {
+  position: absolute;
+  right: 12px;
+  top: 6px;
+  width: auto;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  display: inline;
+  color: #05050592;
+}
+
+
+/* 
+ */
+
+
+.container {
+  width: 100%;
+}
+
+.container1 {
+  width: 100%;
+  margin: 10px 0 0 0;
+}
+
+.container2 {
+  text-align: left;
+}
+
+.table-container {
+  margin: 10px 0 0 0;
+  /* height: 270px; */
+  /* max-height: 300px; */
+  transition: height 0.2s ease-out;
+
+  border-radius: 20px;
+}
+
+
+.row {
+  display: grid;
+  grid-template-columns: 0.8fr 1fr 2fr 2fr;
+  align-items: center;
+  width: 100%;
+  padding: 10px;
+
+  transition: all 0.2s ease-out;
+}
+
+.row:hover {
+  background-color: #ffffff6e;
+
+}
+
+
+/* 프사 뒷배경 */
+.friend-section-profile {
+  width: 50px;
+  height: 50px;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgb(148 208 255 / 30%);
+}
+
+/* 프사 이미지 */
+.friend-section-profile img {
+  position: relative;
+  top: 5px;
+  left: 5px;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.friend-section-profile::after {
+  content: "●";
+  text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+  position: relative;
+  top: -45px;
+  right: -35px;
+  z-index: 1;
+
+  color: #2d2f32;
+}
+
+/* 상태따라 다른 색 */
+.friend-section-profile-online::after {
+  color: rgb(40, 214, 95);
+}
+
+.friend-section-profile-busy::after {
+  color: #ff9f46;
+}
+
+.friend-section-profile-offline::after {
+  color: rgb(214, 40, 40);
+}
+
+/* 프사 이미지 끝 */
+
+/* 언어 */
+.language {}
+
+
+/* 이름 영역 */
+.user-name * {
+  /* grid-column: 2; */
+  width: 100%;
+  box-sizing: border-box;
+  /* padding: 0 10px 0 20px; */
+
+  word-break: keep-all;
+}
+
+.user-name *:first-of-type {
+  font-size: small;
+  text-align: left;
+  color: #949498;
+}
+
+.user-name *:last-of-type {
+  font-size: 17px;
+  text-align: left;
+  color: #4a4b4d;
+  font-weight: 600;
+}
+
+/* -------------- 반응형 구간 ------------------------- */
+/* 큰화면 */
+@media only screen and (min-width : 1900px) {
+  .janjan{
+      zoom : 1.5
+  }
+}
+
+
+/* 작은화면 */
+@media only screen and (max-width: 1200px) {
+  .janjan{
+      zoom : 1
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .janjan{
+      zoom : 0.7
+  }
+}
+
+@media only screen and (max-width: 546px) {
+  .janjan{
+      zoom : 0.5
+  }
+}

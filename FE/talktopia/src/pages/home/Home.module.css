@@ -1,0 +1,167 @@
+.title {
+    position: fixed;
+    font-family: 'EF_jejudoldam';
+    color: #012A4A;
+    font-size: 35px;
+    margin-left: -1250px;
+    margin-bottom: 650px;
+}
+
+.user {
+    width: 55px;
+    position: fixed;
+    top: 20px;
+    right: 320px;
+    z-index: 10;
+}
+
+.dding {
+    width: 60px;
+    position: fixed;
+    top: 17px;
+    right: 230px;
+}
+
+.earth {
+    width: 50px;
+    position: fixed;
+    top: 24px;
+    right: 140px;
+    z-index: 10;
+}
+
+.faq {
+    width: 50px;
+    position: fixed;
+    top: 24px;
+    right: 50px;
+    z-index: 10;
+}
+
+.meModal {
+    font-family: 'Dovemayo_wild';
+    font-size: 17px;
+    width: 160px;
+    height: 210px;
+    margin-top: -300px;
+    margin-left: 840px;
+    border-radius: 15px;
+    background-color: white;
+    opacity: 0.9;
+    z-index: 100;
+    position: relative;
+}
+
+.mytext {
+    margin-top: 10px;
+}
+
+.earthModal {
+    font-family: 'Dovemayo_wild';
+    font-size: 17px;
+    width: 120px;
+    height: 90px;
+    margin-top: -510px;
+    margin-left: 1210px;
+    border-radius: 15px;
+    background-color: white;
+    opacity: 0.9;
+    z-index: 100;
+}
+
+.countrytext {
+    margin-top: 10px;
+}
+
+.faqModal {
+    font-family: 'Dovemayo_wild';
+    font-size: 17px;
+    width: 100px;
+    height: 90px;
+    margin-top: -520px;
+    margin-left: 1350px;
+    border-radius: 15px;
+    background-color: white;
+    opacity: 0.9;
+    z-index: 100;
+}
+
+.faqtext {
+    margin-top: 10px;
+}
+
+.img {
+    width: '50px';
+    height: '50px';
+    border-radius: '50%';
+    overflow: 'hidden';
+    margin-top: 15px;
+}
+
+.guide {
+    position: absolute;
+    font-family: 'Dovemayo_wild';
+    color: #012A4A;
+    font-size: 32px;
+    font-weight: 800;
+    /* margin-right: 1200px;
+    margin-top: 270px; */
+    z-index: 3;
+    /* top: 445px; */
+    left: 35px;
+    bottom: 142px;
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+
+}
+
+.sign {
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    /* top: 400px; */
+    left: 17px;
+    bottom: 0;
+    margin: 0;
+    z-index: 0;
+}
+
+/* -------------- 반응형 구간 ------------------------- */
+/* 큰화면 */
+@media only screen and (min-width : 1900px) {
+    .guide{
+        zoom: 1.5;
+    }
+    .sign{
+        zoom : 1.5;
+    }
+}
+
+/* 작은화면 */
+@media only screen and (max-width: 1200px) {
+    .guide{
+        zoom: 1;
+    }
+    .sign{
+        zoom : 1;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .guide{
+        zoom: 0.7;
+    }
+    .sign{
+        zoom : 0.7;
+    }
+}
+
+@media only screen and (max-width: 546px) {
+    .guide{
+        zoom: 0.5;
+    }
+    .sign{
+        zoom : 0.5;
+    }
+}

@@ -1,0 +1,596 @@
+{
+  "start": {
+      "wideSea": "Meet the wide world with Toktopia",
+      "variousNation": "Do you want to video chat with people from other countries?",
+      "go": "Go to TalkTopia"
+  },
+  "nohome": {
+      "myInfo": "내 정보 보기",
+      "logout": "로그아웃",
+      "pageLangKR": "한국어",
+      "pageLangEN": "영어",
+      "inquiry": "1:1 문의",
+      "deepSea": "세계를 하나로 잇는 깊은 바다 처럼",
+      "port": "는 여러분의 여정을 시작할 특별한 항구가 될거에요.",
+      "peoples": "원하는 인원 수를 설정하여",
+      "sail": "님만의 특별한 항해를 떠날 수 있어요.",
+      "variousNation": "마음에 맞는 다양한 국적의 사람들과 행운 넘치는 시간을 보내길 기원할게요.",
+      "addLan": "내가 사용할 언어",
+      "random2": "랜덤 2인",
+      "random4": "랜덤 4인",
+      "random6": "랜덤 6인",
+      "createRoom": "방 만들기",
+      "showFriends": "친구 목록 보기"
+    },
+    "home": {
+      "mouse": "Hover mouse over",
+      "over": "animal friends!"
+    },
+    "user": {
+      "lan": "Language",
+      "myInfo": "View My Information",
+      "logout": "logout"
+    },
+    "Alram": {
+      "renew": "Refresh",
+      "empty": "Notification is empty."
+    },
+    "Leave": {
+      "msg1": "Your account has been successfully deleted.",
+      "msg2": "Thank you for using TalkTopia and for your love and support.",
+      "msg3": "We will continue to work hard and improve to become a better TalkTopia.",
+      "accept": "OK"
+    },
+    "MyInfo": {
+      "setPwConfirmMsg1": "Passwords match.",
+      "setPwConfirmMsg2": "Passwords do not match.",
+      "updateMyInfoPwValid": "Please check the password input requirements.",
+      "confirmButtonText1": "OK",
+      "updateMyInfouserPwCorrect": "Passwords do not match.",
+      "confirmButtonText2": "OK",
+      "checkyourId": "Please check the name input requirements.",
+      "confirmButtonText3": "OK",
+      "ModifySuccess": "Modification completed.",
+      "confirmButtonText4": "OK",
+      "checkLeaveReal": "Are you sure you want to leave?",
+      "checkLeaveRealText": "Clicking the leave button will permanently delete your account.",
+      "confirmButtonText5": "Leave",
+      "cancelButtonText1": "Cancel",
+      "modifyyourImage": "Profile picture has been updated.",
+      "confirmButtonText6": "OK",
+      "modifyMyInfo": "Modify My Info",
+      "fileupload1": "Upload File",
+      "fileupload2": "Register",
+      "modifyId": "ID",
+      "modifyEmail": "Email",
+      "modifyPW": "Password",
+      "modifyGuide": "Please enter 8-16 characters with a combination of letters, numbers, and special characters (!@#$%^*+=-).",
+      "modifyCheckyourPw": "Confirm Password",
+      "modifyName": "Name",
+      "noyAccessSpace": "Spaces are not allowed",
+      "userLanguage": "User Language",
+      "idontknow": "Select",
+      "useLanguage1": "Korean",
+      "useLanguage2": "German",
+      "useLanguage3": "Russian",
+      "useLanguage4": "Spanish",
+      "useLanguage5": "English",
+      "useLanguage6": "Italian",
+      "useLanguage7": "Indonesian",
+      "useLanguage8": "Japanese",
+      "useLanguage9": "French",
+      "useLanguage10": "Portuguese",
+      "useLanguage11": "Chinese Simplified",
+      "useLanguage12": "Chinese Traditional",
+      "useLanguage13": "Hindi",
+      "DeclineUser": "Leave",
+      "Modify": "Modify"
+    },
+    "MyInfoPw": {
+      "notPwEqual": "Passwords do not match.",
+      "confirmButtonText1": "OK",
+      "showMyInfo": "View My Info",
+      "checkyourPw": "Please confirm your password to update your information.",
+      "foryourDetect": "This step is necessary to protect your personal information.",
+      "doMyBest": "We will do our best to ensure that you can update your information with peace of mind.",
+      "confirmButtonText2": "OK",
+      "done":"Done",
+      "verifyPw":"Check your Password"
+    },
+    "Modal":{
+      "close":"Close"
+    },
+    "ChatWindow": {
+      "alertMessag": "Please write a message.",
+      "leftMinute": "minutes ago",
+      "leftNow": "just now",
+      "chatNow": "Type a message..."
+    },
+    "Faq2": {
+      "counsel": "Contact Us",
+      "faq0": "How do I use Talktopia?",
+      "faq1": "Talktopia is a global video chat service with real-time translation. Hover over the animals on the main page to instantly meet friends from various countries.",
+      "faq60": "And if you want to meet a friend who communicates well, you can create a chat room by clicking 'Create a Room' on the main page and invite friends you've met.",
+      
+      "faq2": "How are users connected in the video chat app?",
+      "faq3": "The video chat app is connected with a global server infrastructure, connecting users from various regions worldwide. Depending on the region and language, appropriate servers are used to ensure smooth communication.",
+      "faq4": "Language",
+      "faq5": "How many languages does Talktopia support?",
+      "faq6": "Talktopia supports 12 languages: Korean, German, Russian, Spanish, English, Italian, Indonesian, Japanese, French, Portuguese, Simplified Chinese, Traditional Chinese, and Hindi. Thank you.",
+      "faq7": "Video Chat",
+      "faq8": "Is there a limit to the number of participants in a video chat?",
+      "faq9": "You can have a minimum of 2 participants and a maximum of 6 participants in a video chat.",
+      "faq10": "Video Chat",
+      "faq11": "How do I create or join a video chat room?",
+      "faq12": "You can start a new chat on the main screen or create a video chat room directly. You can also join chats that your friends have invited you to.",
+      "faq13": "Video Chat",
+      "faq14": "Can I view chat history in the chat room?",
+      "faq15": "No, you cannot view chat history. However, please note that administrators can review the conversation content during video chat to prevent malicious use.",
+      
+      "faq17": "Account and Settings",
+      "faq18": "How can I change my personal information?",
+      "faq19": "Click the user icon in the top right corner and select 'View My Info'. After entering your password for privacy protection, you can change your photo, name, password, and preferred language.",
+      "faq20": "Report",
+      "faq21": "What should I do if another user behaves inappropriately?",
+      "faq22": "Click the 'Report' button at the bottom right of the screen of the user who displayed inappropriate behavior. Select the inappropriate behavior and the report will be completed. We will take appropriate action after confirmation. Thank you.",
+      "faq23": "Error",
+      "faq24": "What should I do if the video or audio does not work during a video chat?",
+      "faq25": "First, make sure your camera and microphone are properly connected. Also, check if the camera and microphone access permissions for the app are allowed in your device's settings. If the problem persists, try restarting your device.",
+      
+      "faqa": "Error",
+      "faqb": "What should I do if I can't hear the other person?",
+      "faqc": "Please restart your device first.",
+      "faqd": "If the problem continues, please provide answers to the following questions through 1:1 inquiry. It will greatly help us to fix the error:",
+      "faqe": "1. Whether the error occurs with a specific user or all users",
+      "faqw": "2. Whether the error occurs during matching or video call",
+      "faqf": "3. Whether the device is muted",
+      "faqg": "4. Whether there are sound issues in other apps as well",
+      "faqh": "5. Whether earphones/headsets or Bluetooth earphones/headsets are used",
+      
+      "faq26": "Error",
+      "faq27": "What should I do if the sound is not transmitted to the other person?",
+      "faq28": "Please restart your device first.",
+      "faq29": "If the problem continues, please provide answers to the following questions through 1:1 inquiry. It will greatly help us to fix the error:",
+      "faq30": "1. Whether the microphone is working",
+      "faq31": "2. Whether the error occurs with specific users or all users",
+      "faq32": "3. Whether earphones/headsets or Bluetooth earphones/headsets are used",
+      "faq33": "4. Whether music is played through the device during Talktopia use",
+      "faq34": "5. Whether the same error occurs when using other sites"
+    },
+    "Counsel": {
+      "realcoun1": "1:1 Inquiry",
+      "realcoun2": "Contact Us 1:1",
+      "realcoun3": "Inquiry"
+    },
+    "Error": {
+      "notFoundPage": "Page not found.",
+      "backError": "Go back"
+    },
+    "JoinLogin": {
+      "JoinLogin1": "Nice to meet you!",
+      "JoinLogin2": "Shall we meet new friends today?",
+      "JoinLogin3": "Confirm",
+      "JoinLogin4": "Invalid ID or password.",
+      "JoinLogin0": "Does not match.",
+      "JoinLogin5": "Please check your ID and password.",
+      "JoinLogin6": "Confirm",
+      "JoinLogin7": "Spaces are not allowed.",
+      "JoinLogin8": "Email Verify",
+      "JoinLogin9": "Please enter your ID.",
+      "JoinLogin10": "Confirm",
+      "JoinLogin11": "Available ID.",
+      "JoinLogin12": "Please proceed with the next registration process!",
+      "JoinLogin13": "ID is already in use.",
+      "JoinLogin14": "Please enter a different ID!",
+      "JoinLogin15": "Confirm",
+      "JoinLogin16": "Check the ID input conditions!",
+      "JoinLogin17": "Confirm",
+      "JoinLogin18": "Passwords match.",
+      "JoinLogin19": "Passwords do not match.",
+      "JoinLogin20": "Spaces are not allowed.",
+      "JoinLogin21": "Mail Sent",
+      "JoinLogin22": "An authentication code has been sent to the email address you entered.",
+      "JoinLogin01": "Check your email address.",
+      "JoinLogin23": "Confirm",
+      "JoinLogin24": "Email address is already in use.",
+      "JoinLogin25": "Confirm",
+      "JoinLogin26": "Not a valid email!",
+      "JoinLogin27": "Please check if you entered the email correctly.",
+      "JoinLogin28": "Confirm",
+      "JoinLogin29": "Verification complete",
+      "JoinLogin30": "Email verification successful.",
+      "JoinLogin31": "Confirm",
+      "JoinLogin32": "The verification code is incorrect.",
+      "JoinLogin001": "Please check again",
+      "JoinLogin33": "Confirm",
+      "JoinLogin34": "Sign-up success",
+      "JoinLogin35": "Thank you for becoming a friend of TalkTopia 👨🏾‍🤝‍👨🏻",
+      "JoinLogin36": "Confirm",
+      "JoinLogin37": "Sign-up failure",
+      "JoinLogin38": "Spaces are not allowed.",
+      "JoinLogin39": "Email Verification",
+      "JoinLogin40": "Please check for duplicate IDs.",
+      "JoinLogin41": "Confirm",
+      "JoinLogin42": "Please check your password.",
+      "JoinLogin43": "Confirm",
+      "JoinLogin44": "Please enter your name correctly.",
+      "JoinLogin45": "Confirm",
+      "JoinLogin46": "Please verify your email.",
+      "JoinLogin47": "Confirm",
+      "JoinLogin48": "Please select your language.",
+      "JoinLogin49": "Confirm",
+      "JoinLogin50": "Welcome to TalkTopia! 🐬",
+      "JoinLogin51": "ID",
+      "JoinLogin52": "Password",
+      "JoinLogin53": "Log in.",
+      "JoinLogin54": "Log in with SNS account",
+      "JoinLogin55": "Nice to meet you!",
+      "JoinLogin56": "Are you ready to join new friends? 😊",
+      "JoinLogin57": "Confirm",
+      "JoinLogin58": "Find ID",
+      "JoinLogin59": "Find Password",
+      "JoinLogin60": "Nice to meet you",
+      "JoinLogin61": "Are you ready to join new friends? 😊",
+      "JoinLogin62": "Log in now and enjoy various services of TalkTopia!",
+      "JoinLogin63": "Are you new?",
+      "JoinLogin64": "Welcome to your new beginning 💙",
+      "JoinLogin65": "Join us and make new friends from all around the world!",
+      "JoinLogin66": "Go to Sign Up",
+      "JoinLogin67": "Go to Login",
+      "JoinLogin68": "A new adventure begins!",
+      "JoinLogin69": "🌊 Let's create wonderful moments together!",
+      "JoinLogin70": "ID",
+      "JoinLogin71": "Duplicate ID",
+      "JoinLogin72": "Enter 6-12 characters with a combination of letters and numbers",
+      "JoinLogin73": "Password",
+      "JoinLogin74": "Enter 8-16 characters with a combination of letters, numbers, and special characters(!@#$%^*+=-).",
+      "JoinLogin75": "Password Confirmation",
+      "JoinLogin76": "Name",
+      "JoinLogin77": "Email",
+      "JoinLogin78": "Select",
+      "JoinLogin79": "Enter manually",
+      "JoinLogin80": "Please enter the verification code sent to your email address.",
+      "JoinLogin81": "Verify Code",
+      "JoinLogin002": "Resend",
+      "JoinLogin82": "Remaining Time:",
+      "JoinLogin83": "min",
+      "JoinLogin84": "sec",
+      "JoinLogin85": "Time is up",
+      "JoinLogin87": "Language",
+      "JoinLogin88": "Select",
+      "JoinLogin89": "Korean",
+      "JoinLogin90": "German",
+      "JoinLogin91": "Russian",
+      "JoinLogin92": "Spanish",
+      "JoinLogin93": "English",
+      "JoinLogin94": "Italian",
+      "JoinLogin95": "Indonesian",
+      "JoinLogin96": "Japanese",
+      "JoinLogin97": "French",
+      "JoinLogin98": "Portuguese",
+      "JoinLogin99": "Chinese Simplified",
+      "JoinLogin100": "Chinese Traditional",
+      "JoinLogin101": "Hindi",
+      "JoinLogin102": "Sign Up"
+    },
+    "Logout1": {
+      "logoutmsg1": "Have you had a good time",
+      "logoutmsg2": "communicating with people of various nationalities?",
+      "logoutmsg3": "See you again!",
+      "logoutmsg4": "Go to TalkTopia Home",
+      "logoutmsg5": "Logged out successfully! 🙂"
+    },
+    "SocialLogin": {
+      "SocialLoginmsg1": "Please select your language!",
+      "SocialLoginmsg2": "Confirm",
+      "SocialLoginmsg3": "Sign-up success!",
+      "SocialLoginmsg4": "Thank you for becoming a friend of TalkTopia 👨🏾‍🤝‍👨🏻",
+      "SocialLoginmsg5": "Confirm",
+      "SocialLoginmsg6": "Unauthorized access",
+      "SocialLoginmsg7": "Confirm",
+      "SocialLoginmsg8": "Additional Information",
+      "SocialLoginmsg9": "Welcome! Thank you for signing up with social login.",
+      "SocialLoginmsg10": "Please provide additional information for full access to TalkTopia's features.",
+      "SocialLoginmsg11": "This information will help us provide personalized services.",
+      "Socialmsg1": "Language",
+      "Socialmsg2": "Select",
+      "Socialmsg3": "Korean",
+      "Socialmsg4": "German",
+      "Socialmsg5": "Russian",
+      "Socialmsg6": "Spanish",
+      "Socialmsg7": "English",
+      "Socialmsg8": "Italian",
+      "Socialmsg9": "Indonesian",
+      "Socialmsg10": "Japanese",
+      "Socialmsg11": "French",
+      "Socialmsg12": "Portuguese",
+      "Socialmsg13": "Chinese Simplified",
+      "Socialmsg14": "Chinese Traditional",
+      "Socialmsg15": "Hindi"
+    },
+    "PaasswordFindSuccess": {
+      "PaasswordFindSuccess1": "Password Recovery",
+      "PaasswordFindSuccess2": "A temporary password has been sent to the email address you entered.",
+      "PaasswordFindSuccess3": "The issued password is temporary, so please change it after logging in.",
+      "PaasswordFindSuccess4": "Go to Log in"
+    },
+    "PaasswordFindFail": {
+      "PaasswordFindFail1": "Password Recovery",
+      "PaasswordFindFail2": "No information registered with the entered information.",
+      "PaasswordFindFail3": "Go to Log in",
+      "PaasswordFindFail4": "Find ID",
+      "PaasswordFindFail5": "Find Password"
+    },
+    "PasswordFind": {
+      "PasswordFind1": "Password Recovery",
+      "PasswordFind2": "Please enter the name, ID, and email you registered with TalkTopia.",
+      "PasswordFind3": "ID",
+      "PasswordFind4": "Name",
+      "PasswordFind5": "Email",
+      "PasswordFind6": "Select",
+      "PasswordFind7": "Enter manually",
+      "PasswordFind8": "Find Password"
+    },
+    "IdFindSuccess": {
+      "IdFindSuccess1": "Find ID",
+      "IdFindSuccess2": "To prevent personal information theft, the last two digits of the ID are replaced with **.",
+      "IdFindSuccess3": "Your ID is registered as",
+      "IdFindSuccess4": "(으)로",
+      "IdFindSuccess5": "Go to Log in",
+      "IdFindSuccess6": "Find Password"
+    },
+    "IdFindFail": {
+      "IdFindFail1": "Find ID",
+      "IdFindFail2": "No information registered with the entered name and email.",
+      "IdFindFail3": "Find ID",
+      "IdFindFail4": "Go to Log in"
+    },
+    "IdFind": {
+      "IdFind1": "Please fill in all fields.",
+      "IdFind2": "Confirm",
+      "IdFind3": "Find ID",
+      "IdFind4": "Please enter the name and email you registered with TalkTopia.",
+      "IdFind5": "Select",
+      "IdFind6": "Enter manually",
+      "IdFind7": "Name",
+      "IdFind8": "Email"
+    },
+    "NotificationAccordion": {
+      "Notification1": "Notifications",
+      "Notification2": "Refresh"
+    },
+    "useTokenValidation": {
+      "useTokenValidation1": "Your session has expired, and you have been logged out.",
+      "useTokenValidation2": "If you want to continue using TalkTopia, please log in again.",
+      "useTokenValidation3": "Confirm"
+    },
+    "VideoChatLogView": {
+      "VideoChatLogView1": "Video Chat Room Logs"
+    },
+    "VideoChatLogTable": {
+      "VideoChatLogTable1": "DB No",
+      "VideoChatLogTable2": "Room ID",
+      "VideoChatLogTable3": "Creation Time",
+      "VideoChatLogTable4": "End Time",
+      "VideoChatLogTable5": "Log File"
+    },
+    "UserView": {
+      "UserView1": "Currently registered user information and features..."
+    },
+    "UserTable": {
+      "UserTable1": "ID",
+      "UserTable2": "Name",
+      "UserTable3": "Email",
+      "UserTable4": "Profile Image",
+      "UserTable5": "Language"
+    },
+    "ReporterView": {
+      "ReporterView1": "Reporter Information"
+    },
+    "ReporterTable": {
+      "ReporterTable1": "DB No",
+      "ReporterTable2": "Reporter",
+      "ReporterTable3": "Reported User",
+      "ReporterTable4": "Report Content",
+      "ReporterTable5": "Creation Time",
+      "ReporterTable6": "Room ID"
+    },
+    "AdminPage": {
+      "AdminPage1": "User View",
+      "AdminPage2": "Reporter",
+      "AdminPage3": "View Video Chat Logs"
+    },
+    "UserVideoComponent": {
+      "confirmButtonText1": "Confirm"
+    },
+    "ToolbarComponent": {
+      "ToolbarComponent1": "Generate Random",
+      "ToolbarComponent2": "End Topic",
+      "ToolbarComponent3": "Suggest Topic"
+    },
+    "ReportModalComponent": {
+      "ReportModalComponent1": "Confirm",
+      "ReportModalComponent2": "Report User",
+      "ReportModalComponent3": "Report",
+      "ReportModalComponent4": "Report Detailed Reason"
+    },
+    "InviteModalComponent": {
+      "InviteModalComponent1": "Friend List",
+      "InviteModalComponent2": "Invite"
+    },
+    "ConversationLog": {
+      "ConversationLog1": "Translation"
+    },
+    "Chat": {
+      "Chat1": "Chat",
+      "Chat2": "Send a message"
+    },
+    "AddFriendButton": {
+      "AddFriendButton1": "You have requested to add a friend!",
+      "AddFriendButton2": "Confirm",
+      "AddFriendButton3": "Friend Request Success",
+      "AddFriendButton4": "Already friends!",
+      "AddFriendButton5": "Already friends.",
+      "AddFriendButton6": "Add Friend"
+    },
+    "FriendSearch": {
+      "FriendSearch1": "Friend Search"
+    },
+    "UserSet": {
+      "lang1": "Korean",
+      "lang2": "English",
+      "lang3": "German",
+      "lang4": "Russian",
+      "lang5": "Spanish",
+      "lang6": "Italian",
+      "lang7": "Indonesian",
+      "lang8": "Japanese",
+      "lang9": "French",
+      "lang10": "Chinese Simplified",
+      "lang11": "Chinese Traditional",
+      "lang12": "Portuguese",
+      "lang13": "Vietnamese",
+      "lang14": "Language: ",
+      "lang15": "View My Info",
+      "lang16": "Log Out"
+    },
+    "faqq": {
+      "faqq1": "1:1 Inquiry"
+    },
+    "Earth": {
+      "Earth1": "Korean",
+      "Earth2": "English"
+    },
+    "Alram1": {
+      "Alram11": "Refresh",
+      "Alram22": "No notifications."
+    },
+    "Admin1": {
+      "Admin11": "This is the administrator page."
+    },
+    "BearGroup": {
+      "ment1": "Join the random 4-person room!",
+      "ment2": "Join"
+    },
+    "FriendGroup": {
+      "ment1": "Create a room and communicate with friends!",
+      "ment2": "Join"
+    },
+    "FriendList1": {
+      "ment1": "Friend List"
+    },
+    "PenguinGroup": {
+      "ment1": "Join the random 2-person room!",
+      "ment2": "Join"
+    },
+    "WhaleGroup": {
+      "ment1": "Join the random 6-person room!",
+      "ment2": "Join"
+    },
+    "PostDetail": {
+      "ment1": "Posted on: ",
+      "ment2": "Year",
+      "ment3": "Month",
+      "ment4": "Day",
+      "ment5": "Hour",
+      "ment6": "Minute",
+      "ment7": "Second",
+      "ment8": "A new comment has been posted.",
+      "ment9": "Confirm",
+      "ment10": "Confirm",
+      "ment11": "Do you want to delete the post?",
+      "ment12": "Confirm",
+      "ment13": "Cancel",
+      "ment14": "The post has been successfully deleted.",
+      "ment15": "Confirm",
+      "ment16": "Question",
+      "ment17": "Title: ",
+      "ment18": "Delete Post",
+      "ment19": "Answer",
+      "ment20": "Administrator's Response ",
+      "ment21": "No response yet.",
+      "ment22": "Responses are being processed sequentially, so we will provide a response as soon as possible.",
+      "ment23": "Thank you for your interest in TalkTopia.",
+      "ment24": "Enter a response to the inquiry.",
+      "ment25": "Submit"
+    },
+    "PostForm": {
+      "PostForm1": "Please enter the title.",
+      "PostForm2": "Confirm",
+      "PostForm3": "Please enter the content of the inquiry.",
+      "PostForm4": "Confirm",
+      "PostForm5": "The inquiry has been registered.",
+      "PostForm6": "Confirm",
+      "PostForm7": "Do you want to cancel?",
+      "PostForm8": "The content you wrote will not be saved.",
+      "PostForm9": "Confirm",
+      "PostForm10": "Cancel",
+      "PostForm11": "Inquire",
+      "PostForm12": "Title",
+      "PostForm13": "Please enter the title.",
+      "PostForm14": "Inquiry Content",
+      "PostForm15": "Please enter the inquiry content.",
+      "PostForm16": "Cancel",
+      "PostForm17": "Register"
+    },
+    "PostList": {
+      "PostList1": "Number",
+      "PostList2": "Title"
+    },
+    "NotificationDetail": {
+      "NotificationDetail1": "Request Failed Message: ",
+      "NotificationDetail2": "Friend Request Message: ",
+      "NotificationDetail3": "Video Chat Request Message: ",
+      "NotificationDetail4": "Message Content: ",
+      "NotificationDetail5": "Message Status: ",
+      "NotificationDetail6": "Sender: ",
+      "NotificationDetail7": "Room Number: "
+    },
+    "DenyList": {
+      "DenyList1": "Offline Users (Request Completed): "
+    },
+    "Deny": {
+      "Deny1": "Deny"
+    },
+    "Close": {
+      "Close1": "Deny"
+    },
+    "Accept": {
+      "Accept1": "The room is full",
+      "Accept2": "The room is full and you cannot join anymore.",
+      "Accept3": "Confirm",
+      "Accept4": "Error",
+      "Accept5": "An error occurred.",
+      "Accept6": "Confirm",
+      "Accept7": "Friend Registration Complete",
+      "Accept8": "Enjoy the world of TalkTopia with your friends ",
+      "Accept9": "Confirm",
+      "Accept10": "Duplicate Friend Error",
+      "Accept11": "Already a friend.",
+      "Accept12": "Confirm",
+      "Accept13": "Unknown Error",
+      "Accept14": "Friend addition was not completed due to an unknown error.",
+      "Accept15": "Confirm",
+      "Accept16": "Accept"
+    },
+    "searchFind": {
+      "searchFind1": "No users match the search results.",
+      "searchFind2": "User Search",
+      "searchFind3": "Search by ID",
+      "searchFind4": "Search by Email",
+      "searchFind5": "Search by Language",
+      "searchFind6": "Select Language",
+      "searchFind7": "Enter ID",
+      "searchFind8": "Enter Email",
+      "searchFind9": "Search Results",
+      "searchFind10": "Image",
+      "searchFind11": "ID",
+      "searchFind12": "Name",
+      "searchFind13": "Language",
+      "searchFind14": "Status",
+      "searchFind15": "Add Friend",
+      "searchFind16": "No users match the search results."
+    }
+
+
+}

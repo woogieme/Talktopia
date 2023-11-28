@@ -1,0 +1,62 @@
+version: "3"
+services:
+  server:
+    image: ttp-back:latest
+    container_name: ttp_back
+    build:
+      context: ./BE/Talktopia/talktopia
+      args:
+        SERVER_MODE: prod
+    ports:
+        - 10001:8000
+    environment:
+        - TZ=Asia/Seoul
+    networks:
+      - talktopia_network
+  server2:
+    image: ttp-back-chat:latest
+    container_name: ttp_back_chat
+    build:
+      context: ./BE/Talktopia/talktopia_chat
+      args:
+        SERVER_MODE: prod
+    ports:
+        - 15000:7500
+    environment:
+        - TZ=Asia/Seoul
+    networks:
+      - talktopia_network
+  client:
+    image: ttp-front:latest
+    container_name: ttp_front
+    build:
+      context: ./FE/talktopia
+      dockerfile: Dockerfile
+    ports:
+      - 3000:3000
+    depends_on:
+      - server
+    networks:
+      - talktopia_network
+  nginx:
+    image: ttp-nginx:latest
+    container_name: ttp_nginx
+    build: ./.nginx
+#    depends_on:
+#      - server
+    ports:
+      - 80:80
+      - 443:443
+    networks:
+      - talktopia_network
+#  redis:
+#    image: redis
+#    container_name: redis
+#    hostname: talktopia.site
+#    ports:
+#      - 6379:6379
+#    networks:
+#      - talktopia_network
+networks:
+  talktopia_network:
+    driver: bridge

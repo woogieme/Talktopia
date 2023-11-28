@@ -1,0 +1,53 @@
+/* PostList.css */
+
+.post-list-container {
+    max-height: 300px; /* 높이를 줄여서 작게 만듭니다 */
+    overflow-y: auto;
+    margin-top: 10px; /* 상단 여백을 줄입니다 */
+  }
+  
+.post-link {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.2s;
+    padding: 6px 12px; /* 패딩을 작게 조정합니다 */
+    display: block;
+    border: 1px solid #ccc;
+    margin: 5px; /* 마진을 줄여서 간격을 작게 만듭니다 */
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* 그림자도 작게 만듭니다 */
+    
+  }
+  
+  .post-link:hover {
+    color: red; /* 호버 효과 컬러를 조정합니다 */
+  }
+
+  .ul {
+    list-style: none;
+    padding: 0;
+    width:80%;
+    margin: auto;
+    max-height: 400px; /* 높이를 줄여서 작게 만듭니다 */
+    overflow-y: auto;
+  }
+  
+  .li {
+    font-family: 'Dovemayo_wild';
+    font-size: 20px;
+    /* border: 1px solid #ccc; */
+    margin: 10px;
+    padding-top: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(146, 160, 206, 0.1);
+    border-radius: 15px;
+    opacity: 0.6;
+    text-align: left;
+    padding-left: 30px;
+    height: 60px;
+  }
+
+  .li:hover {
+    background-color: #73bfee;
+  }
+  

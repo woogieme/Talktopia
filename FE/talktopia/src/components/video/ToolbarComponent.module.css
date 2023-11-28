@@ -1,0 +1,71 @@
+.video-call-actions {
+  display: flex;
+  max-width: 500px;
+  align-items: center;
+}
+
+.video-action-button {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  margin: 0 8px;
+  background-position: center;
+  background-size: 24px;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: #fff;
+  box-shadow: 0px 0px 8px 0px #282b33;
+  border-radius: 8px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.video-action-button:hover {
+  transform: scale(1.05); /* 호버 시 확대 효과 */
+}
+
+
+.video-game-button {
+  display: flex;
+  flex-direction: row;
+  width: 100px;
+  height: 48px;
+  margin: 0 8px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 24px;
+  border: none;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 0px 8px 0px #282b33;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  outline: none;
+}
+
+.video-game-button p {
+  margin: 0;
+  font: bold;
+  /* color: black; */
+}
+
+.video-game-button-HOST {
+  color: black;
+  transition: transform 0.2s;
+}
+
+.video-game-button-HOST:hover {
+  transform: scale(1.05); /* 호버 시 확대 효과 */
+}
+
+.video-game-button-GUEST {
+  background-color: #eee;
+  color: grey;
+}
+
+.topic-button {
+  padding-top: 4px;
+}

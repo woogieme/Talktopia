@@ -1,0 +1,183 @@
+.background {
+    background: #bcd8da;
+    background-attachment: fixed;
+    background-size: cover; /* 이미지를 커버할 수 있도록 설정 */
+    height: 100vh; /* 화면 높이에 맞추기 위해 100vh로 설정 */
+  }
+
+.title{
+  font-family: 'EF_jejudoldam';
+  font-size: 35px;
+  color: #012A4A;
+  padding-top: 60px;
+  margin: auto;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.name{
+  font-family: 'Dovemayo_wild';
+  color: #012A4A;
+  margin-left: -920px;
+  font-size: 24px;
+}
+.name1{
+  font-family: 'Dovemayo_wild';
+  color: #012A4A;
+  margin-left: -880px;
+  font-size: 24px;
+}
+/* .container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+  } */
+  
+  .form {
+    font-family: 'Dovemayo_wild';
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .input {
+    font-family: 'Dovemayo_wild';
+    margin: auto;
+    width: 1000px;
+    height: 50px;
+    margin-bottom: 30px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10px;
+    opacity: 0.6;
+  }
+  
+  .textarea {
+    font-family: 'Dovemayo_wild';
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 4px;
+    width: 65%;
+    height: 200px;
+    border: none;
+    resize: none;
+    border-radius: 10px;
+    opacity: 0.6;
+  }
+
+  .buttonGroup{
+    margin-left: 680px;
+  }
+  
+  .button {
+    font-family: 'Dovemayo_wild';
+    background-color: #013A63;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    width: 150px;
+    height: 40px;
+    border-radius: 15px;
+    font-size: 20px;
+    transition: background-color 0.2s;
+    margin: 20px 10px 0 10px;
+    display: inline-block;
+  }
+  
+  .button:hover {
+    background-color:  #23587d;
+  }
+  
+.grass1{
+  position: absolute;
+  width: 90px;
+  bottom: 0;
+  margin-left: 600px;
+  margin-bottom: 0px;
+}
+
+.grass5{
+  position: absolute;
+  width: 100px;
+  bottom: 0;
+  margin-left: -730px;
+  margin-bottom: 5px;
+}
+
+.fish1{
+  position: absolute;
+  width: 70px;
+  bottom: 0;
+  margin-left: -400px;
+  margin-bottom: 550px;
+  animation: grass1 3s ease-in-out infinite;
+}
+
+.fish34{
+  position: absolute;
+  width: 70px;
+  margin: -40px 0 0 -80px;
+  animation: bubble1 3s ease-in-out infinite;
+}
+
+.bubble1{
+  position: absolute;
+  width: 60px;
+  margin: -500px 0 0 600px;
+  opacity: 0.4;
+  animation: bubble1 3s ease-in-out infinite;
+}
+
+.bubble2{
+  position: absolute;
+  width: 50px;
+  margin: -300px 0 0 -650px;
+  opacity: 0.4;
+  animation: bubble2 3s ease-in-out infinite;
+}
+
+.bubble3{
+  position: absolute;
+  width: 50px;
+  margin: 0px 0 0 -350px;
+  opacity: 0.4;
+  animation: bubble3 3s ease-in-out infinite;
+}
+
+@keyframes grass1 {
+  0%, 100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+}
+
+@keyframes bubble1 {
+  0%, 100% {
+    transform: translateX(0) rotate(0);
+  }
+  50% {
+    transform: translateX(10px) rotate(10deg);
+  }
+}
+
+  @keyframes bubble2 {
+    0%, 100% {
+      transform: translateX(10px) rotate(0);
+    }
+    50% {
+      transform: translateX(0) rotate(10deg);
+    }
+}
+
+@keyframes bubble3 {
+  0%, 100% {
+    transform: translateY(10px) rotate(0);
+  }
+  50% {
+    transform: translateY(0) rotate(10deg);
+  }
+}

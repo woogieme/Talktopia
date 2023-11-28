@@ -1,0 +1,172 @@
+.background {
+  background: #bcd8da;
+  background-attachment: fixed;
+  background-size: cover; /* 이미지를 커버할 수 있도록 설정 */
+  height: 100vh; /* 화면 높이에 맞추기 위해 100vh로 설정 */
+}
+
+.admin-page-title {
+  font-family: 'EF_jejudoldam';
+  color: #012A4A;
+  padding-top: 40px;
+  margin-bottom: 20px;    
+}
+
+.move-home {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  margin: 0;
+  width: auto;
+  font-family: 'EF_jejudoldam';
+  font-size: 20px;
+  color: #012A4A;
+  /* cursor: pointer; */
+}
+
+.manage-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.manage-button {
+  height: auto;
+  margin: 10px 10px 0 10px;
+  padding: 5px;
+  border-radius: 5px;
+  font-family: 'Dovemayo_wild';
+  color: #012A4A;
+  font-size: 25px;
+}
+
+.manage-button:hover{
+  color: rgb(101, 147, 164);
+  text-decoration: underline;
+}
+
+.selected-manage-button {
+  border-radius: 10px;
+  border-top: 2.4px solid rgba(255, 255, 255, 0.657);
+  border-bottom: 2.3px solid rgba(0, 0, 0, 0.02);
+  background: linear-gradient(rgba(0, 0, 0, 0.026) 10%, transparent 20%, rgba(255, 255, 255, 0.57) 70%);
+}
+
+/* ReporertView, VideoChatLogView */
+.manage-view-container {
+  height: 70%;
+  margin: 0 10%;
+  padding: 0% 2%;
+  background: linear-gradient(rgba(255, 255, 255, 0.636) 60%, rgba(255, 255, 255, 0.347));
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  overflow: scroll;
+  
+  &::-webkit-scrollbar {
+    width: 10px; /* 스크롤바의 너비 */
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background-color: #4a90e2; /* 스크롤바 핸들의 색상 */
+    border-radius: 5px; /* 스크롤바 핸들의 모서리 반경 */
+  }
+  
+  &::-webkit-scrollbar-track {
+    background-color: none; /* 스크롤바 트랙의 배경색 */
+  }
+}
+
+/* 물고기, 거품*/
+
+.fish7{
+  position: absolute;
+  width: 70px;
+  bottom: 10%;
+  left: 5%;
+  animation: fish7 3s ease-in-out infinite;
+}
+
+.fish2{
+  position: absolute;
+  width: 70px;
+  right: 10%;
+  top: 10%;
+
+  animation: fish2 3s ease-in-out infinite;
+}
+
+.bubble1{
+  position: absolute;
+  width: 60px;
+  right: 3%;
+  top: 40%;
+  opacity: 0.4;
+  animation: bubble1 3s ease-in-out infinite;
+}
+
+.bubble2{
+  position: absolute;
+  width: 50px;
+  right: 5%;
+  bottom: 5%;
+  opacity: 0.4;
+  animation: bubble2 3s ease-in-out infinite;
+}
+
+.bubble3{
+  position: absolute;
+  width: 50px;
+  top: 50%;
+  left: 4%;
+  opacity: 0.4;
+  animation: bubble3 3s ease-in-out infinite;
+}
+
+@keyframes fish7 {
+  0%, 100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+}
+
+
+@keyframes fish2 {
+  0%, 100% {
+    transform: translateX(0) rotate(0);
+  }
+  50% {
+    transform: translateX(10px) rotate(10deg);
+  }
+}
+
+@keyframes bubble1 {
+  0%, 100% {
+    transform: translateX(0) rotate(0);
+  }
+  50% {
+    transform: translateX(10px) rotate(10deg);
+  }
+}
+
+  @keyframes bubble2 {
+    0%, 100% {
+      transform: translateX(10px) rotate(0);
+    }
+    50% {
+      transform: translateX(0) rotate(10deg);
+    }
+}
+
+@keyframes bubble3 {
+  0%, 100% {
+    transform: translateY(10px) rotate(0);
+  }
+  50% {
+    transform: translateY(0) rotate(10deg);
+  }
+}

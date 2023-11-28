@@ -1,0 +1,55 @@
+.user-info {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  left: 2%;
+  top: 2%;
+  background-color: rgba(0,15,47,0.5);
+  border-radius: 4px;
+
+  justify-content: space-evenly;
+  align-items: center;
+  z-index: 10;
+}
+
+.flag-img {
+  width: 36px;
+  height: auto;
+  margin-left: 10%;
+}
+
+
+.name-tag {
+  font-size: 12px;
+  color: #fff;
+  border-radius: 4px;
+  padding: 4px 12px;
+}
+
+.participant-actions {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  bottom: 12px;
+  right: 12px;
+  justify-content: space-evenly;
+  gap: 5px;
+
+}
+
+.participant-actions-button {
+  width: 32px;
+  height: 32px;
+  border-radius: 4px;
+  background-color: rgba(159, 181, 228, 0.5);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px;
+  border: none;
+  transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.participant-actions-button:hover {
+  background-color: #2980b9;
+  transform: scale(1.1); /* 사이즈 확대 */
+}

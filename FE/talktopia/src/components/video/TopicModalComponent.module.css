@@ -1,0 +1,81 @@
+.topic-modal-window {
+  position: fixed;
+  /* background-color: rgba(255, 255, 255, 0.25); */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 900;
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+  /* transition: all 0.3s; */
+  font-family: 'Dovemayo_wild';
+}
+
+.topic-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 37.3%;
+  width: auto;
+  height: auto;
+  padding: 2em;
+  background: linear-gradient(rgba(255, 255, 255, 0.636) 60%, rgba(255, 255, 255, 0.347));
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  transform: translate(-50%, -50%);
+  /* transition: right 0.3s ease-in-out; */
+  transition: opacity 0.3s ease-in-out;
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.topic-modal-titlebox {
+  width: auto;
+  margin: 0;
+  padding: 0px 20px;
+}
+
+.topic-modal-textbox {
+  width: auto;
+  margin: 5px 0px;
+  border-radius: 10px;
+  border-top: 2.4px solid rgba(255, 255, 255, 0.657);
+  border-bottom: 2.3px solid rgba(0, 0, 0, 0.02);
+  padding: 20px;
+  background: linear-gradient(rgba(0, 0, 0, 0.026) 10%, transparent 20%, rgba(255, 255, 255, 0.57) 70%);
+}
+
+.topic-modal-title {
+  display: block;
+  font-weight: bold;
+  font-size: 17px;
+  margin: 0;  
+}
+
+.topic-modal-text {
+  display: block;
+  font-weight: bold;
+  font-size: 20px;
+  margin: 0;  
+}
+
+.topic-modal-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  border: none;
+  color: #05050592;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  /* text-decoration: none; */
+  transition: transform 0.3s;
+}
+
+.topic-modal-close:hover {
+  transform: scale(1.05); /* 호버 시 확대 효과 */
+  color: black;
+}

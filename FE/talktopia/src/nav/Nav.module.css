@@ -1,0 +1,12 @@
+.title{
+    position: fixed;
+    font-family: 'EF_jejudoldam';
+    color: #012A4A;
+    font-size: 35px;
+    top: 13px;
+    left: 20px;
+    margin: 0;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+}

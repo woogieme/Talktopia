@@ -1,0 +1,150 @@
+.background {
+    background: #bcd8da;
+    background-attachment: fixed;
+    background-size: cover; /* 이미지를 커버할 수 있도록 설정 */
+    height: 100vh; /* 화면 높이에 맞추기 위해 100vh로 설정 */
+}
+
+.page {
+  padding-top: 40px;
+}
+
+.title {
+  font-family: 'EF_jejudoldam';
+  color: #012A4A;
+}
+
+.categoryGroup{
+  display: flex;
+  justify-content: center; /* 수평 가운데 정렬 */
+  align-items: center; 
+}
+
+.category{
+  font-family: 'Dovemayo_wild';
+  color: #012A4A;
+  margin: 10px 10px 0 10px;
+  font-size: 25px;
+}
+
+.category:hover{
+  color: rgb(101, 147, 164);
+  text-decoration: underline;
+}
+
+.button {
+  font-family: 'Dovemayo_wild';
+  background-color: #013A63;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  width: 170px;
+  height: 50px;
+  border-radius: 15px;
+  font-size: 20px;
+  transition: background-color 0.2s;
+  margin: 20px 10px 0 10px;
+  display: inline-block;
+  
+}
+
+.container {
+    display: flex;
+    flex-direction: column; /* 컨텐츠를 수직으로 배치 */
+    align-items: center; /* 가운데 정렬 */
+    justify-content: center; /* 가운데 정렬 */
+    height: 100vh;
+}
+
+
+.grass1{
+  position: absolute;
+    width: 90px;
+    bottom: 0;
+    margin-left: 650px;
+    margin-bottom: 0px;
+}
+
+.grass5{
+  position: absolute;
+    width: 100px;
+    bottom: 0;
+    margin-left: -750px;
+    margin-bottom: 5px;
+}
+
+@keyframes grass1 {
+  0%, 100% {
+    transform: translateX(0px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+}
+
+.fish7{
+  position: absolute;
+  width: 70px;
+  bottom: 0;
+  margin-left: -680px;
+  margin-bottom: 580px;
+  animation: grass1 3s ease-in-out infinite;
+}
+
+.fish6{
+  position: absolute;
+    width: 55px;
+    margin: -500px 0 0 650px;
+    animation: bubble1 3s ease-in-out infinite;
+}
+
+.bubble1{
+  position: absolute;
+    width: 60px;
+    margin: -660px 0 0 350px;
+    opacity: 0.4;
+    animation: bubble1 3s ease-in-out infinite;
+}
+
+.bubble2{
+  position: absolute;
+    width: 50px;
+    margin: -40px 0 0 -300px;
+    opacity: 0.4;
+    animation: bubble2 3s ease-in-out infinite;
+}
+
+.bubble3{
+  position: absolute;
+  width: 50px;
+  margin: -60px 0 0 240px;
+  opacity: 0.4;
+  animation: bubble3 3s ease-in-out infinite;
+}
+
+@keyframes bubble1 {
+  0%, 100% {
+    transform: translateX(0) rotate(0);
+  }
+  50% {
+    transform: translateX(10px) rotate(10deg);
+  }
+}
+
+  @keyframes bubble2 {
+    0%, 100% {
+      transform: translateX(10px) rotate(0);
+    }
+    50% {
+      transform: translateX(0) rotate(10deg);
+    }
+}
+
+@keyframes bubble3 {
+  0%, 100% {
+    transform: translateY(10px) rotate(0);
+  }
+  50% {
+    transform: translateY(0) rotate(10deg);
+  }
+}

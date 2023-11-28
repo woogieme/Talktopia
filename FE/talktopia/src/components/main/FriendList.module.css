@@ -1,0 +1,274 @@
+.friend-list-modal-overlay {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 100vw;
+    /* 모달창 너비 조정 */
+    height: 100vh;
+    /* 모달창 높이 조정 */
+
+    /* backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px ); */
+    background: rgb(0 0 0 / 15%);
+
+    overflow: hidden;
+    z-index: 100;
+}
+
+.friend-list-modal {
+    position: absolute;
+    right: 0%;
+    bottom: 25%;
+
+    width: 370px;
+    height: 60%;
+
+    padding: 20px;
+    border-radius: 20px;
+
+    word-break: keep-all;
+    font-family: 'Dovemayo_wild';
+
+    /* blur */
+    /* box-shadow: 0 5px 30px rgba(0, 0, 0, .2); */
+    border-radius: 20px;
+
+    background: linear-gradient(rgba(255, 255, 255, 0.636) 60%, rgba(255, 255, 255, 0.347), #e0feff66);
+
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+}
+
+.friend-list {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    margin-top: 30px;
+    height: 80%;
+    border-radius: 20px;
+}
+
+.friend-list-h2 {
+    /* margin: 20px 0 0 0; */
+    padding-left: 10px;
+    font-weight: 800;
+    text-align: left;
+    color: #4a4d52;
+}
+
+/* 스크롤바 */
+.friend-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+.friend-list::-webkit-scrollbar-track {
+    /* background-color: grey; */
+    border-radius: 10px;
+    /* box-shadow: inset 0px 0px 5px white; */
+}
+
+.friend-list::-webkit-scrollbar-thumb {
+    background-color: #8db1c7;
+
+    border-radius: 10px;
+    /* background-clip: padding-box; */
+    border: 1px solid transparent;
+}
+
+.modal-search-btn {
+    position: absolute;
+    right: 39px;
+    top: 15px;
+    width: 22px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: #adadad;
+    display: inline;
+}
+
+
+.modal-close-btn {
+    position: absolute;
+    right: 12px;
+    top: 6px;
+    width: auto;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    color: #05050592;
+    display: inline;
+}
+
+
+.friend-section {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    align-items: center;
+
+    padding: 10px;
+
+
+    transition: all 0.2s ease-out;
+
+}
+
+.friend-section:hover {
+    background-color: #ffffff6e;
+}
+
+/* 프사 뒷배경 */
+.friend-section-profile {
+    grid-column: 1;
+    width: 50px;
+    height: 50px;
+    box-sizing: border-box;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 5px 10px rgb(148 208 255 / 30%);
+}
+
+/* 프사 이미지 */
+.friend-section-profile img {
+    position: relative;
+    top: 8%;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.friend-section-profile::after {
+    content: "●";
+    text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+    position: relative;
+    top: -45px;
+    right: -18px;
+    z-index: 1;
+
+    color: #2d2f32;
+}
+
+/* 상태따라 다른 색 */
+.friend-section-profile-online::after {
+    color: rgb(40, 214, 95);
+}
+
+.friend-section-profile-busy::after {
+    color: #ff9f46;
+}
+
+.friend-section-profile-offline::after {
+    color: rgb(214, 40, 40);
+}
+
+/* 프사 이미지 끝 */
+
+.friend-section-name {
+    grid-column: 2;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 10px 0 20px;
+
+    word-break: break-all;
+}
+
+.friend-section-name *:first-of-type {
+    font-size: small;
+    text-align: left;
+    color: #949498;
+}
+
+.friend-section-name *:last-of-type {
+    font-size: larger;
+    text-align: left;
+    color: #4a4b4d;
+    font-weight: 600;
+}
+
+/* 채팅하기 버튼 */
+.enter-chat-btn {
+    display: inline;
+    grid-column: 3;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+
+    transition: all 0.2s ease-out;
+
+    /* blur */
+    box-shadow: 0 5px 10px rgba(255, 255, 255, .1);
+    border-radius: 20px;
+
+    background: linear-gradient(rgba(0, 0, 0, 0.045) 20%, transparent, #e0feff66);    /* background-color: rgba(255, 255, 255, 0.3); */
+
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
+    border: 2px solid white;
+}
+
+.enter-chat-btn:hover {
+    background-color: white;
+}
+
+.enter-chat-btn * {
+    width: 24px;
+    position: relative;
+    top: 2px;
+    right: 1px;
+    color: #84848b;
+}
+
+.enter-chat-btn:hover *{
+    color: #a2a2a9;
+
+}
+
+/* -------------- 반응형 구간 ------------------------- */
+/* 큰화면 */
+@media only screen and (min-width : 1900px) {
+    .friend-list-modal {
+        zoom: 1.5
+    }
+}
+
+@media only screen and (min-height : 1900px) {
+    .friend-list {
+        height: 95%;
+    }
+}
+
+/* 작은화면 */
+@media only screen and (max-width: 1200px) {
+    .friend-list-modal {
+        zoom: 1
+    }
+}
+
+@media only screen and (max-height: 900px) {
+    .friend-list {
+        height: 90%;
+    }
+}
+
+@media only screen and (max-height: 760px) {
+    .friend-list {
+        height: 80%;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .friend-list-modal {
+        zoom: 0.7
+    }
+}
+
+@media only screen and (max-width: 546px) {
+    .friend-list-modal {
+        zoom: 0.5
+    }
+}

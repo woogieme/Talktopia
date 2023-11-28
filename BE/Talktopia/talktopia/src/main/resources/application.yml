@@ -1,0 +1,72 @@
+# application.yml
+server:
+  port: 8000
+  ssl:
+    key-store:
+    key-store-password:
+    key-store-type:
+
+# Spring
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://talktopia.site:50000/talktopia?useSSL=false&serverTimezone=UTC&useUnicode=yes&characterEncoding=UTF-8
+    username:
+    password:
+  profiles:
+    include:
+      - aws
+      - credentials
+  # JPA
+  jpa:
+    hibernate:
+      ddl-auto: update
+      # (create / create-drop / update / validate)
+
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+
+  #NaverMail
+  mail:
+    username:
+    password:
+
+
+
+  # JWT
+  security:
+    jwt:
+      secret:
+  redis:
+    host: talktopia.site
+    port: 6379
+    password:
+# log level
+logging:
+  level:
+    root: INFO
+
+# OpenVidu
+openvidu:
+  url: https://talktopia.site:8443/
+  secret:
+
+cloud:
+  aws:
+    s3:
+      bucket: talktopia
+    region:
+      static: ap-northeast-2 #Asia Pacific -> seoul
+    stack:
+      auto: false
+    credentials:
+      access-key:
+      secret-key:
+servlet:
+  multipart:
+    enabled: true
+    max-file-size: 20MB
+    max-request-size: 20MB

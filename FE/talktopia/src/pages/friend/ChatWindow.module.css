@@ -1,0 +1,343 @@
+/* styles.css */
+.chat-window {
+  position: absolute;
+  bottom: 25%;
+
+  /* position: relative; */
+
+  width: 550px;
+  height: 60%;
+  padding: 20px;
+
+
+  /* z-index: 1;   */
+  box-sizing: border-box;
+  
+  transition: right 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+
+  font-family: 'Dovemayo_wild';
+
+  /* blur */
+  /* box-shadow: 0 5px 30px rgba(0, 0, 0, .2); */
+  border-radius: 20px;
+
+  background: linear-gradient(rgba(255, 255, 255, 0.636) 60%, rgba(255, 255, 255, 0.347), #e0feff66);
+
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.chat>* {
+  /* border-radius: 20px; */
+  /* margin: 10px 0; */
+}
+
+.hide-chat {
+  right: 0px;
+  /* 처음에는 화면 밖으로 위치 */
+  opacity: 0;
+}
+
+.show-chat {
+  right: 370px;
+  /* 화면 내로 이동하여 표시 */
+}
+
+.chat {
+  display: grid;
+  grid-template-rows: 14% 75% 11%;
+  height: 100%;
+}
+
+.placeholder {
+  height: 1px;
+  margin-top: -1px;
+}
+
+
+.chat-header {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  align-items: start;
+  word-break: keep-all;
+  margin: 0 0 10px 0;
+}
+.chat-header h2{
+  margin: 0;
+  text-align: left;
+  font-size: 20px;
+  font-weight: 800;
+  display: inline;
+  color: #4a4d52;
+}
+
+/* 프사 뒷배경 */
+.friend-section-profile {
+  grid-column: 1;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 5px 10px rgb(148 208 255 / 30%);
+
+}
+
+/* 프사 이미지 */
+.friend-section-profile img {
+  position: relative;
+  top: 8%;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.friend-section-profile::after {
+  content: "●";
+  text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+  position: relative;
+  top: -35px;
+  right: -15px;
+  z-index: 1;
+
+  color: #2d2f32;
+}
+
+/* 상태따라 다른 색 */
+.friend-section-profile-online::after {
+  color: rgb(40, 214, 95);
+}
+
+.friend-section-profile-busy::after {
+  color: #ff9f46;
+}
+
+.friend-section-profile-offline::after {
+  color: rgb(214, 40, 40);
+}
+
+/* 프사 이미지 끝 */
+
+
+
+
+.chat-content {
+  padding: 0 12px;
+
+  /* background-color: rgba(255, 255, 255, 0.558); */
+  background: linear-gradient(rgba(0, 0, 0, 0.026) 10%, transparent 20%, rgba(255, 255, 255, 0.57) 70%);
+  overflow-y: scroll;
+  overflow-x: hidden;
+
+  border-top: 2.4px solid rgba(255, 255, 255, 0.657);
+  border-bottom: 3.3px solid rgba(0, 0, 0, 0.02);
+  padding-top: 10px;
+  border-radius: 20px;
+}
+
+/* 스크롤바 */
+.chat-content::-webkit-scrollbar {
+  width: 3px;
+}
+
+.chat-content::-webkit-scrollbar-track {
+  border-radius: 10px;
+  /* background-color: #15aeff; */
+
+}
+
+.chat-content::-webkit-scrollbar-thumb {
+  /* background-color: rgba(0, 0, 0, 0.204); */
+  background-color: #8db1c7;
+  border-radius: 20px;
+  /* background-clip: padding-box; */
+  border: 1px solid transparent;
+}
+
+
+/* 채팅 입력하는 부분 */
+.chat-input {
+  display: grid;
+  grid-template-columns: 85% 15%;
+  margin: 10px 0 0 0;
+  height: 30px;
+}
+
+.chat-input input {
+  grid-column: 1;
+  background-color: rgba(233, 234, 236, 0.524);
+  border-radius: 30px;
+  padding: 0 15px;
+  color: rgb(92, 93, 97);
+  font-family: 'Dovemayo_wild';
+  border: 2px solid rgba(255, 255, 255, 0.201);
+} 
+
+
+
+/* 채팅메세지 */
+.chat-msg{
+  display: inline-block;
+  word-break: break-all;
+  border-radius: 18px;
+  padding: 7px 12px;
+  max-width: 300px;
+  /* color: #4a4b4d; */
+  color: rgb(92, 93, 97);
+}
+
+.chat-msg-parent {
+  margin-bottom: 10px;
+}
+
+.my-chat-msg {
+  text-align: right;
+}
+
+.my-chat-msg .chat-msg{
+  background-color: white;
+  margin: 0 0 0 10px;
+  text-align: left;
+}
+
+.friend-chat-msg {
+  text-align: left;
+}
+.friend-chat-msg .chat-msg {
+  border: 2px solid white;
+  margin: 0 13px 0 10px;
+  background-color: rgba(233, 234, 236, 0.524);
+}
+
+.chat-msg-original {
+  color: rgb(160 161 167);
+  font-size: 14px;
+}
+
+/* 친구 채팅 윗부분 프사, 시간 */
+/* 프사시작 */
+.friend-chat-msg .friend-section-profile{
+  display: inline-block;
+}
+.friend-chat-msg .friend-section-profile img {
+  position: relative;
+  top: 5px;
+  left: 5px;
+
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.friend-chat-msg .friend-section-profile::after {
+  content: "●";
+  text-shadow: -2px 0 white, 0 2px white, 2px 0 white, 0 -2px white;
+  position: relative;
+  top: -35px;
+  right: -28px;
+  z-index: 1;
+
+  color: #2d2f32;
+
+}
+
+/* 상태따라 다른 색 */
+.friend-chat-msg .friend-section-profile-online::after {
+  color: rgb(40, 214, 95);
+}
+
+.friend-chat-msg .friend-section-profile-busy::after {
+  color: #ff9f46;
+}
+
+.friend-chat-msg .friend-section-profile-offline::after {
+  color: rgb(214, 40, 40);
+}
+/* 프사끝 */
+
+
+
+
+.chat-send-time {
+  grid-column: 2;
+  color: #949498;
+  font-size: small;
+}
+
+.chat-send-btn {
+  display: inline;
+  width: 60px;
+  /* height: 40px; */
+  border-radius: 30px;
+  background-color: #15aeff;
+  /* background: linear-gradient(#ffffffc7, transparent); */
+  border: 2.5px solid white;
+  border: 2px solid rgb(255 255 255 / 88%);
+}
+
+.chat-send-btn:hover {
+  background-color: #2fb6ff;
+}
+
+.chat-send-btn *{
+  color: rgb(255, 255, 255);
+  width: 25px;
+}
+
+/* 채팅창 닫기버튼 */
+.chat-close-btn {
+  position: absolute;
+  right: 12px;
+  top: 6px;
+  width: auto;
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  color: #05050592;
+  display: inline;
+}
+
+/* -------------- 반응형 구간 ------------------------- */
+/* 큰화면 */
+@media only screen and (min-width : 1900px) {
+  .chat-window{
+      zoom : 1.5
+  }
+}
+@media only screen and (min-height : 1900px) {
+  .friend-list{
+      height: 95%;
+  }
+}
+
+/* 작은화면 */
+@media only screen and (max-width: 1200px) {
+  .chat-window{
+      zoom : 1
+  }
+}
+/* @media only screen and (max-height: 900px) {
+  .friend-list{
+      height: 75%;
+  }
+}
+@media only screen and (max-height: 760px) {
+  .friend-list{
+      height: 70%;
+  }
+} */
+
+@media only screen and (max-width: 950px) {
+  .chat-window{
+      zoom : 0.7
+  }
+}
+
+@media only screen and (max-width: 546px) {
+  .chat-window{
+      zoom : 0.5
+  }
+}

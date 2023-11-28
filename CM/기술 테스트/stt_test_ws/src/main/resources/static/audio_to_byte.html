@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Audio Streaming Client</title>
+</head>
+<body>
+<h1>Audio Streaming Client</h1>
+<button onclick="startStreaming()">Start Streaming</button>
+<button onclick="stopStreaming()">Stop Streaming</button>
+
+<script src="
+https://cdn.jsdelivr.net/npm/sockjs-client@1.1.2/dist/sockjs.min.js
+"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"
+        integrity="sha512-iKDtgDyTHjAitUDdLljGhenhPwrbBfqTKWO1mkhSFH3A7blITC9MhYon6SjnMhp4o0rADGw9yAC6EW4t5a4K3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+
+    // let websocket; // 웹소켓 객체
+    var sockJs = new SockJS("http://localhost:5000/audio-stream");
+    var stomp = Stomp.over(sockJs)
+    connect();
+
+    function startStreaming() {
+        if(navigator.mediaDevices){ // 마이크 가능한지
+            navigator.mediaDevices.getUserMedia({ audio: true }) // 마이크 사용하여 stream추출
+            .then(function (stream) { // getUserMedia로 추출된 오디오 스트림
+
+                // getUserMedia로 얻은 오디오 스트림을 WebSocket을 통해 서버로 전송
+                // Web Audio API 이용하여 오디오 스트림 처리할것
+
+                const audioContext = new (window.AudioContext || window.webkitAudioContext)(); 
+                // 스트림 생성
+                const mediaStreamSource = audioContext.createMediaStreamSource(stream); 
+                // 오디오 데이터 처리할 프로세서
+                const processor = audioContext.createScriptProcessor(1024, 1, 1) 
+
+                // 오디오 스트림과 프로세서 연결
+                mediaStreamSource.connect(processor);
+                // 오디오 스트림을 스피커에 연결
+                processor.connect(audioContext.destination);
+
+
+                // 오디오 데이터가 캡처될 때 호출되는 이벤트 핸들러
+                processor.onaudioprocess = function (e) {
+                    // e.inputBuffer는 오디오 버퍼를 담고 있음
+                    const audioData = e.inputBuffer.getChannelData(0);
+
+                    // // 바이트 배열로 변환. stt 호출 위함
+                    const byteArray = float32ArrayToByteArray(audioData);
+
+                    // 1초 단위로 오디오 데이터를 작은 청크로 나누어서 여러 번 전송
+                    const chunkSize = 1024; // 예시로 3초 크기의 청크를 사용
+                    const numChunks = Math.ceil(byteArray.length / chunkSize);
+                    for (let i = 0; i < numChunks; i++) {
+                        const start = i * chunkSize;
+                        const end = Math.min(start + chunkSize, byteArray.length);
+                        const chunk = byteArray.slice(start, end);
+
+                        // 각 청크를 3초마다 전송
+                        setTimeout(()=>{
+                            stomp.send("/app/send", {}, chunk);
+                        }, 1000*i)
+                    }
+                }
+            })
+            .catch(function (error) {
+                console.log('Error accessing microphone:', error);
+            });
+        } 
+        else{
+            alert("getUserMedia XX")
+        }
+    }
+
+    function connect(){
+        // connect에서 비어있는 {}는 헤더정보임.
+        stomp.connect({}, function (frame){ //frame은 stomp의 메세지 프레임
+                    // console.log("연결!!!!!")
+                    // console.log("connected: "+frame);
+                    // 웹소켓서버의 /topic/sub을 구독하면 message들어옴
+                    stomp.subscribe("/topic/sub", function (message){
+                        console.log("메세지를받았단다.", message);
+                })
+        })
+    }
+
+    // Float32Array타입의 오디오 데이터를 Uint8Array타입의 바이트 배열로 변환함.
+    function float32ArrayToByteArray(float32Array) {
+        const buffer = new ArrayBuffer(float32Array.length * 4);
+        const view = new DataView(buffer);
+        float32Array.forEach((value, index) => {
+            view.setFloat32(index * 4, value, true);
+        });
+        return new Uint8Array(buffer);
+    }
+
+    function stopStreaming() {
+        // if (websocket) {
+        //     websocket.close();
+        //     websocket = null;
+        // }
+        stomp.disconnect();
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .chat-box{
+            display: inline;
+            border: 1px solid black;
+            min-width: 30%;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+    <h1>세션연결부터하세요</h1>
+    <button onclick="setSession('1')">1세션 연결</button>
+    <button onclick="setSession('2')">2세션 연결</button>
+    <button onclick="setSession('3')">3세션 연결</button>    
+    
+    <br>
+    <input type="text" name="" id="nickname" placeholder="닉네임입력">
+    <input type="text" name="" id="content" placeholder="채팅입력">
+    <button onclick="send()">전송</button>
+
+    <div>
+        <div class="chat-box" id="box1">1세션 채팅방<br></div>
+        <div class="chat-box" id="box2">2세션 채팅방<br></div>
+        <div class="chat-box" id="box3">3세션 채팅방<br></div>
+    </div>
+
+    <script src="
+https://cdn.jsdelivr.net/npm/sockjs-client@1.1.2/dist/sockjs.min.js
+"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"
+        integrity="sha512-iKDtgDyTHjAitUDdLljGhenhPwrbBfqTKWO1mkhSFH3A7blITC9MhYon6SjnMhp4o0rADGw9yAC6EW4t5a4K3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    /* 
+            참고 : 
+            웹소켓 연결은 비동기.
+            stomp.connect()가 실행될 때까지 다음 코드가 실행되는 상황 발생
+            즉 setSession()내에서 stomp.connect()가 실행되지 않고 바로
+            connect()가 호출되면 웹소켓 연결이 설정되기 전 subscribe()가 먼저 실행되어
+            sessionId가 정의되기 전 /topic/sub/undefined로 subscribe하게 됨
+            */
+    
+    var sessionId; // 세션아이디
+    var stomp; 
+    var sockJs
+    
+    // 세션 결정 => 새로운 연결
+    function setSession(ss) {
+
+        // 이전에 연결 돼있으면
+        if (stomp) {
+            stomp.disconnect(); // 이전 연결 끊기
+        }
+
+        sessionId = ss;
+        console.log(`이제부터 session은 ${sessionId}입니다`)
+        
+        // 새로운 연결 만들기
+        sockJs = new SockJS("http://192.168.31.232:7500/chat-server");
+        stomp = Stomp.over(sockJs);
+        
+        // 웹소켓 연결 후 subscribe
+        connect()
+        .then(()=>{
+            console.log("웹소켓 연결 완료!!")
+            subscribeToTopic();
+        })
+        .catch((error)=>{
+            console.log("웹소켓 연결 실패!!", error)
+        })
+        
+    }
+    
+    // 웹소켓 연결
+    function connect(){
+        // stomp 객체를 전역 변수로 선언하고, 연결이 되지 않는 경우에도 계속해서 재연결 시도를 하기 때문에 웹소켓 연결에 문제가 발생
+        // 웹소켓 연결 (connect 함수 호출)
+
+        // 웹소켓의 비동기 연결로 인한 문제를 해결하기 위해 promise반환
+        return new Promise((resolve, reject)=>{
+            stomp.connect({},
+                function (frame) { 
+                    resolve(); //연결 성공시 resolve 호출
+                },
+                function(error){
+                    reject(error) // 연결실패시 reject 호출
+                }
+            )
+        })
+    }
+
+    // subscribe
+    function subscribeToTopic() {
+        stomp.subscribe(`/topic/sub/${sessionId}`, function (message) {
+            console.log(`/topic/sub/${sessionId}로 subscribe 완료!!`);
+            console.log(JSON.parse(message.body));
+            showMessage(JSON.parse(message.body));
+        }, function() {
+            console.log("연결이 안되요");
+        });
+
+    }
+
+
+    //메세지 출력
+    function showMessage(message) {
+        let message_area;
+        if(sessionId == "1"){
+            message_area = document.getElementById("box1");
+        } else if(sessionId == "2"){
+            message_area = document.getElementById("box2");
+        } else{
+            message_area = document.getElementById("box3");
+        }
+        message_area.innerHTML += `<span> ${message.sender}가 보낸 메세지: ${message.content}</span><br>`
+    }
+
+    // 웹소켓에 전달하는 기능
+    function send() {
+        const nickname = document.getElementById("nickname").value; // 사용자 이름
+        const content = document.getElementById("content").value; // 채팅내용 
+        const sendMessage = {
+            "sender": nickname,
+            "content": content
+        }
+        stomp.send(`/app/send/${sessionId}`, {}, JSON.stringify(sendMessage));
+    }
+</script>
+</body>
+</html>

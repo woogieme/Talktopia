@@ -1,0 +1,41 @@
+.background{
+    background: #bcd8da;
+    background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+.logo {
+    font-family: 'EF_jejudoldam';
+    padding-top: 150px;
+    color: #012A4A;
+    font-size: 40px;
+}
+
+.title {
+    font-family: 'Dovemayo_wild';
+    margin-top: 100px;
+    margin-bottom: 40px;
+    color: #012A4A;
+    font-size: 32px;
+}
+
+.p{
+    font-family: 'Dovemayo_wild';
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: #012A4A;
+}
+
+.button {
+    font-family: 'Dovemayo_wild'; 
+    color: white;
+    background-color: #013A63;
+    width: 350px;
+    height: 50px;
+    font-size: 21px;
+    margin-top: 0px;
+    border-radius: 15px;
+}

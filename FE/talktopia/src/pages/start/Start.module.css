@@ -1,0 +1,567 @@
+/* 웹 */
+
+.background {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  /* background-color: #bcd8da; */
+  background-image: url('../../../public/img/start/그림6.png');
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.h2 {
+  font-family: 'EF_jejudoldam';
+  color: #012A4A;
+  margin: 0 30px;
+  font-size: 35px;
+  word-break: break-all;
+}
+
+.p {
+  font-family: 'Dovemayo_wild';
+  font-size: 25px;
+  color: #012A4A;
+  margin: 30px 30px 0;
+}
+
+.penguin {
+  position: absolute;
+  bottom: 0;
+  left: 47%;
+  transform: translateX(-47%);
+  width: 100px;
+
+  animation: moveAndShrink 3s ease-in-out forwards, jumpAndSink 1.5s ease-in-out 3s forwards;
+  animation-fill-mode: forwards;
+}
+
+.penguin1 {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-47%);
+  width: 100px;
+}
+
+.woodroad {
+  z-index: -1;
+  position: absolute;
+  bottom: 0;
+  left: 49.5%;
+  transform: translateX(-47%);
+  width: 480px;
+  height: 250px;
+}
+
+
+.button {
+  font-family: 'Dovemayo_wild';
+  /* background-color: #468FAF; */
+  border-radius: 5px;
+  color: white;
+  width: 400px;
+  height: 55px;
+  font-size: 25px;
+  text-align: center; 
+  margin: -30px auto 0;
+
+  background: linear-gradient(rgba(255, 255, 255, 0.578), transparent);
+  box-shadow: 0 8px 15px 0 #012a4a1b;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #012a4a9c;
+  transition: all 0.5s ease-out;
+  .span {
+    font-size: 25px;
+  }
+}
+.button:hover{
+  background: linear-gradient(rgba(255, 255, 255, 0.719), transparent);
+  color : #012A4A;
+}
+
+.title {
+  font-family: 'EF_jejudoldam';
+  color: #012A4A;
+  font-size: 80px;
+  margin-top: 120px;
+}
+
+.content {
+  /* top: 50%; */
+  margin-left: 0px;
+  /* transform: translate(-50%, -50%); */
+  height: 160px;
+  overflow: hidden;
+  font-family: "Lato", sans-serif;
+  font-size: 60px;
+  line-height: 90px;
+  color: #ecf0f1;
+}
+
+.content__container {
+  font-weight: 600;
+  overflow: hidden;
+  height: 90px;
+  margin: 0 30px;
+  position: relative;
+
+}
+
+.content__container__list {
+  margin-top: 10px;
+  text-align: center;
+  list-style: none;
+  animation: change 30s infinite;
+  color: white;
+}
+
+
+.content__container__list__item {
+  font-family: 'Dovemayo_wild';
+  line-height: 90px;
+  /* 얘랑 */
+  margin: 0;
+  text-align: center;
+}
+.content__container__list__item::before{
+  content: "\"\00a";
+
+}
+.content__container__list__item::after{
+  content: " \00a \"";
+}
+
+
+
+
+.cloud {
+  position: fixed;
+  top: 10%;
+  left: 8%;
+  z-index: -1;
+
+  width: 120px;
+  height: 90px;
+  animation: moveCloud 30s linear infinite;
+}
+
+
+
+.cloud2 {
+  position: fixed;
+  top: 28%;
+  right: 5%;
+  z-index: -1;
+  width: 120px;
+  height: 90px;
+  /* margin-top: 10px;
+  margin-left: 850px; */
+  animation: moveCloud2 20s ease-in-out infinite;
+}
+
+.cloud3 {
+  position: fixed;
+  top: 38%;
+  left: 20%;
+  z-index: -1;
+
+  width: 100px;
+  height: 100px;
+  animation: moveCloud3 20s ease-in-out infinite;
+}
+
+
+
+.wave {
+  position: fixed;
+  top: 55%;
+  left: 10%;
+  z-index: -1;
+  width: 130px;
+  animation: waves 3s ease-in-out infinite;
+}
+
+
+
+
+.wave1 {
+  width: 130px;
+  position: fixed;
+  right: 10%;
+  bottom: 28%;
+  z-index: -1;
+
+  animation: waves1 3s ease-in-out infinite;
+}
+
+
+
+.splash {
+  position: absolute;
+  width: 40px;
+  left: 55%;
+  bottom: 30%;
+  animation: splashEffect 1s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.splash1 {
+  position: absolute;
+  width: 40px;
+  left: 55%;
+  bottom: 30%;
+  opacity: 0;
+}
+
+.start-header {
+  margin: 90px 0 0 0;
+}
+
+/* 큰화면 */
+@media only screen and (min-width : 1900px) {
+  .penguin1, .penguin{
+    width: 130px;
+  } 
+  .start-header{
+    margin: 150px 0 0 0;
+  }
+  .h2{
+    font-size: 45px;
+  }
+  .p{
+    font-size: 30px;
+  }
+  .splash, .splash{
+    width: 70px;
+    bottom: 20%;
+  }
+  
+}
+
+/* 작은화면 */
+@media only screen and (max-width: 1200px) {
+
+  .wave,
+  .wave1 {
+    width: 110px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  .wave,
+  .wave1 {
+    width: 90px;
+  }
+
+  .button {
+    width: 300px;
+  }
+}
+
+@media only screen and (max-width: 546px) {
+
+  .wave,
+  .wave1 {
+    width: 75px;
+
+  }
+
+  .p {
+    display: none;
+  }
+
+  .button {
+    width: 300px;
+    margin: -40px auto 0;
+  }
+}
+
+
+/* ================================================ keyframes ================================================*/
+
+
+
+@keyframes opacity {
+
+  0%,
+  100% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes change {
+
+  0%,
+  2.2%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+
+  4.4%,
+  6.6% {
+    transform: translate3d(0, -8.3%, 0);
+  }
+
+  8.8%,
+  11% {
+    transform: translate3d(0, -16.6%, 0);
+  }
+
+  13.2%,
+  15.4% {
+    transform: translate3d(0, -24.9%, 0);
+  }
+
+  17.6%,
+  19.8% {
+    transform: translate3d(0, -33.2%, 0);
+  }
+
+  22.0%,
+  24.2% {
+    transform: translate3d(0, -41.5%, 0);
+  }
+
+  26.4%,
+  28.6% {
+    transform: translate3d(0, -49.8%, 0);
+  }
+
+  30.8%,
+  33% {
+    transform: translate3d(0, -58.1%, 0);
+  }
+
+  35.2%,
+  37.4% {
+    transform: translate3d(0, -66.4%, 0);
+  }
+
+  39.6%,
+  41.8% {
+    transform: translate3d(0, -74.7%, 0);
+  }
+
+  44.0%,
+  46.2% {
+    transform: translate3d(0, -83%, 0);
+  }
+
+  48.4%,
+  50.6% {
+    transform: translate3d(0, -91.3%, 0);
+  }
+
+  52.8%,
+  55.0% {
+    transform: translate3d(0, -83%, 0);
+  }
+
+  57.2%,
+  59.4% {
+    transform: translate3d(0, -74.7%, 0);
+  }
+
+  61.6%,
+  63.8% {
+    transform: translate3d(0, -66.4%, 0);
+  }
+
+  66.0%,
+  68.2% {
+    transform: translate3d(0, -58.1%, 0);
+  }
+
+  70.4%,
+  72.6% {
+    transform: translate3d(0, -49.8%, 0);
+  }
+
+  74.8%,
+  77% {
+    transform: translate3d(0, -41.5%, 0);
+  }
+
+  79.2%,
+  81.4% {
+    transform: translate3d(0, -33.2%, 0);
+  }
+
+  83.6%,
+  85.8% {
+    transform: translate3d(0, -24.9%, 0);
+  }
+
+  88.0%,
+  90.2% {
+    transform: translate3d(0, -16.6%, 0);
+  }
+
+  92.4%,
+  94.6% {
+    transform: translate3d(0, -8.3%, 0);
+  }
+}
+
+@keyframes moveCloud {
+
+  0%,
+  100% {
+    transform: translateX(-50%);
+  }
+
+  50% {
+    transform: translateX(50%);
+  }
+}
+
+@keyframes moveCloud2 {
+
+  0%,
+  100% {
+    transform: translateX(30%);
+  }
+
+  50% {
+    transform: translateX(-30%);
+  }
+}
+
+
+@keyframes moveCloud3 {
+
+  0%,
+  100% {
+    transform: translateX(-20%);
+  }
+
+  50% {
+    transform: translateX(20%);
+  }
+}
+
+@keyframes waves {
+
+  0%,
+  100% {
+    transform: rotate(0);
+  }
+
+  12.5% {
+    transform: rotate(5deg);
+  }
+
+  37.5% {
+    transform: rotate(0);
+  }
+
+  62.5% {
+    transform: rotate(-5deg);
+  }
+
+  87.5% {
+    transform: rotate(0);
+  }
+}
+
+
+
+@keyframes waves1 {
+
+  0%,
+  100% {
+    transform: translateX(0) rotate(0);
+  }
+
+  50% {
+    transform: translateX(10px) rotate(10deg);
+  }
+}
+
+@keyframes splashEffect {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-40px) rotate(30deg);
+  }
+
+  100% {
+    opacity: 1;
+    /* 100%에서 투명도를 1로 유지하여 멈춘 상태 유지 */
+    transform: translateX(-50%) translateY(-40px) rotate(30deg);
+  }
+}
+
+@keyframes splashEffectBig {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(0) rotate(0deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(-40px) rotate(30deg);
+  }
+
+  100% {
+    opacity: 1;
+    /* 100%에서 투명도를 1로 유지하여 멈춘 상태 유지 */
+    transform: translateX(-50%) translateY(-40px) rotate(30deg);
+  }
+}
+
+@keyframes moveAndShrink {
+  0% {
+    transform: translateY(0) rotate(0) scale(1);
+  }
+
+  20% {
+    transform: translateY(-28px) rotate(-10deg) scale(0.95);
+  }
+
+  40% {
+    transform: translateY(-56px) rotate(10deg) scale(0.9);
+  }
+
+  60% {
+    transform: translateY(-84px) rotate(-10deg) scale(0.85);
+  }
+
+  80% {
+    transform: translateY(-112px) rotate(10deg) scale(0.8);
+  }
+
+  100% {
+    transform: translateY(-140px) rotate(-10deg) scale(0.7);
+  }
+}
+
+@keyframes jumpAndSink {
+  0% {
+    transform: translateY(-140px) scale(0.7);
+  }
+
+  50% {
+    transform: translateY(-220px) scale(0.5);
+    opacity: 0.6;
+  }
+
+  100% {
+    transform: translateY(-100px) translateX(10px) scale(0.1);
+    opacity: 0;
+  }
+}
